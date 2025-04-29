@@ -21,7 +21,8 @@ namespace Demo_EFC.Controllers
         [HttpGet]
         public IActionResult GetProdutos()
         {
-            var produtos = _context.Produtos.Include(p => p.Categoria).ToList();
+            //var produtos = _context.Produtos.Include(p => p.Categoria).ToList();
+            var produtos = _context.Produtos.ToList();
             return Ok(produtos);
         }
 
